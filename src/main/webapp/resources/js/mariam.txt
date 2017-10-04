@@ -1,0 +1,34 @@
+﻿<html>
+
+<body ="rtl">
+
+<form>
+
+الاسم<inputtype="text">
+
+كلمة السر<inputtype="password">
+
+تاكيد كلمة السر<inputtype="password">
+
+اللغة التى يجيدها br
+اللغة الانجليزية<inputtype="chakboxs">br
+اللغةالعربية<inputtype="chakboxs">br
+اللغةالفرنسية<inputtype="chakboxs"br
+ 
+
+زرامر<inputtype="button">br
+
+زر الارسال<inputtype="submit">
+
+
+
+</form>
+
+
+</body>
+
+
+
+</html>
+
+

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sign up - MyMsgs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8"/>
+        <h:outputStylesheet name="bootstrap/css/bootstrap.css"/>
+        <h:outputScript name="bootstrap\js\bootstrap.min.js"/>
+        <h:outputStylesheet name="main.css"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <style>
+            @media (min-width: 768px) {
+            body{
+                background-image: url(resources/images/MyMsgs.png) ; 
+                background-repeat: no-repeat ; 
+                background-position: 80% 80% ;
+            }
+            .headline{
+                font-size: -webkit-xxx-large ;
+                margin-top: 2% ; 
+                margin-left: 4% ;
+            }
+            
+            }
+            .headline{
+               color: #c41535; 
+            }
+        </style>
+    </h:head>
+    <body>
+         <f:event type="preRenderView" listener="#{login.redirect()}"/>
+                <nav class="navbar navbar-default">
+                            <div class="navbar-header"> 
+                                 <a class="navbar-brand" href="faces/index.xhtml"><span class="glyphicon glyphicon-envelope"></span> MyMsgs</a>
+                                   <button type="button" class="navbar-toggle" data-toggle="collapse"  
+                                        data-target="#example-navbar-collapse"> 
+                                        <span class="sr-only">Toggle navigation</span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span> 
+                                        <span class="icon-bar"></span> 
+                                   </button> 
+                               
+                             </div>
+                            
+                            <div  class="collapse navbar-collapse" id="example-navbar-collapse" >
+                                 <ul class="nav navbar-nav"> 
+                                     <li class="active nav_elements"><a href="faces/index.xhtml"><span class="glyphicon glyphicon-home" style="margin-right:5px;"></span>Home</a></li> 
+                                     <li class="nav_elements"><a href="faces/login.xhtml">Login</a></li> 
+                                     <li class="nav_elements"><a href="faces/signup.xhtml">Sign up</a></li> 
+                                  </ul>
+                            </div> 
+                        </nav>
+        <div class="container">
+        <h1 class="headline">Register now to get your Account </h1>
+           <h:form class="signup">
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                    <h:outputLabel value="Username *"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <h:inputText  value="#{regAccount.username}" class="P-in" required="true" requiredMessage="Username is required" />
+                         <p class = "err"> #{regAccount.UNE}</p>
+                    </div>
+                   
+                    </div>
+                 <div class="col-sm-12">
+                    <div class="col-sm-2">
+                    <h:outputLabel value="Password *"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <h:inputSecret  value="#{regAccount.password}" class="P-in" required="true" requiredMessage="password is required"  />
+                    </div>
+                    </div>
+                 <div class="col-sm-12">
+                    <div class="col-sm-2">
+                    <h:outputLabel value="Rewrite your password *"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <h:inputSecret  value="#{regAccount.repassword}" class="P-in" required="true" requiredMessage="password is required" />
+                         <p class = "err"> #{regAccount.PE}</p>
+                    </div>
+                    
+                    </div>
+                <div class="col-sm-12">
+                    <div class="col-sm-2">
+                     <h:outputLabel value="Mail *"/>
+                    </div>
+                    <div class="col-sm-4">
+                        <h:inputText  validatorMessage="Invalid Mail" value="#{regAccount.email}" class="P-in" required="true" requiredMessage="Mail is required" >
+                        </h:inputText>
+                        <h:outputText  style="margin-left: 100px;color:darkred;"  escape="false" value=""/>
+                        <p class = "err"> #{regAccount.ME}</p>
+                    </div>
+                  
+                    </div>
+                <div class="col-sm-12">   
+                    <div class="col-sm-2">
+                    <h:outputLabel value="Gender *"/>
+                    </div>
+                      <div class="col-sm-4">
+                          <h:selectOneMenu value = "#{regAccount.gender}" class="P-in" > 
+                    <f:selectItem itemValue = "Male" itemLabel = "Male" /> 
+                    <f:selectItem itemValue = "Female" itemLabel = "Female" /> 
+                   </h:selectOneMenu> 
+                      </div>
+                </div>
+                    <div class="col-sm-12">
+                        <h:commandButton class="btn btn-primary signup-btn"  action="#{regAccount.Submit()}" value="Submit">
+                        </h:commandButton>
+                        <h1>#{regAccount.printMsg()}</h1>
+                    </div>
+            </h:form> 
+        </div>
+    </body>
+</html>
