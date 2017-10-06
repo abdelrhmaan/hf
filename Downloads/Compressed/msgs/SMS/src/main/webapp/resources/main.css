@@ -1,0 +1,119 @@
+
+.bbox{
+    text-align: center ; 
+}
+.lb,.sb{
+    width: 50%;
+    padding: 10px;
+    margin: 1%;
+}
+.sb {
+    background-color: #b92c28;
+}
+.navbar-default {
+    padding: 1%;
+    background-color: #337ab7;
+    border-color: #d0c8e1;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 1px 1px 5px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    font-size: 18px;
+    font-family: cursive;
+    background: none ;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 18px;
+    font-family: cursive;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-family: cursive;
+}
+
+
+.signup-btn{
+        margin-top: 2%;
+        margin-left: 1%;
+        width: 20%;
+        box-shadow: 1px 1px 5px black;
+}
+.msg-form{
+    box-shadow: 1px 2px 10px 1px;
+    padding: 2%;
+    background-color: #fafafc;
+    border-radius: 5px;
+    margin-top: 1% ;         
+}
+
+@media (min-width: 768px) {
+    .signup{
+        margin-top: 6%;
+        margin-left: 2%;
+    }
+.navbar-nav {
+    float: right;
+}
+.info-label{
+    float: right ;
+}
+
+
+}
+.M-body{
+    width: 99%;
+    height: 161px;
+}
+.P-in{
+    width: 100%;
+    margin: 1% ; 
+}
+.err{
+    color: red  ;
+    margin-left: 1% ;
+}
+.lf{
+    margin: 1% ;
+    text-align: center;
+}
+.lf>.btn-primary{
+    width: 31%;
+}
+
+.logout{
+        background-color: azure;
+    padding-top: 12px;
+    /* padding-bottom: 15px; */
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    background: none;
+}
+
+.logout>a{
+    color: white;
+}
+
+
+.msg-heading{
+    color: #315455;
+}
+
+.msg-heading:hover{
+    text-decoration: none
+}
+.msg-heading:focus{
+      text-decoration: none
+
+}
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+    background-color: #f5f5fa;
+}
